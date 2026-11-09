@@ -1,0 +1,167 @@
+#root {
+  min-height: 100vh;
+}
+
+/* =========================
+   THEME
+   ========================= */
+
+:root {
+  --navy: #102a43;
+  --navy-light: #183b56;
+  --gold: #d6a928;
+  --mustard: #c99a22;
+
+  --background: #f6f8fb;
+  --white: #ffffff;
+  --text: #102a43;
+  --muted: #6b7785;
+  --border: #e4e9ef;
+}
+
+/* =========================
+   APP
+   ========================= */
+
+.app {
+  min-height: 100vh;
+  padding: 50px 30px;
+  background: var(--background);
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.logo-placeholder {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px dashed var(--gold);
+  border-radius: 20px;
+
+  color: var(--navy);
+  background: var(--white);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  color: var(--navy);
+  font-size: 42px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* =========================
+   CLASSES
+   ========================= */
+
+.classes-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.classes-section h2 {
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.class-card {
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--navy);
+
+  border-radius: 18px;
+  padding: 28px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 25px rgba(16, 42, 67, 0.07);
+
+  transition: all 0.2s ease;
+}
+
+.class-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 30px rgba(16, 42, 67, 0.12);
+}
+
+.class-card:active {
+  transform: translateY(-1px);
+}
+
+.class-name {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.class-arrow {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+  color: var(--navy);
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 700px) {
+  .classes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .app {
+    padding: 35px 18px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .classes-grid {
+    grid-template-columns: 1fr;
+  }
+}
